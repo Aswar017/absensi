@@ -9,4 +9,5 @@ $this->title = 'My Yii Application';
     <div class="jumbotron">
         <h1>Tugas Link & Match!</h1>
     </div>
+  
 </div>

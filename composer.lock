@@ -4,14 +4,14 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9cd87f007dcd9d8cf647fb718b0384f8",
+    "content-hash": "6194918abc3b07b92799ea5e1029b98b",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
             "version": "v3.4.1",
             "source": {
                 "type": "git",
-                "url": "git@github.com:twbs/bootstrap.git",
+                "url": "https://github.com/twbs/bootstrap.git",
                 "reference": "68b0d231a13201eb14acd3dc84e51543d16e5f7e"
             },
             "dist": {
@@ -33,7 +33,7 @@
             "version": "3.3.11",
             "source": {
                 "type": "git",
-                "url": "git@github.com:RobinHerbots/Inputmask.git",
+                "url": "https://github.com/RobinHerbots/Inputmask.git",
                 "reference": "5e670ad62f50c738388d4dcec78d2888505ad77b"
             },
             "dist": {
@@ -336,6 +336,57 @@
                 "html"
             ],
             "time": "2020-06-29T00:56:53+00:00"
+        },
+        {
+            "name": "owk/yii2-circular-navigation",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://bitbucket.org/owk/yii2-circular-navigation.git",
+                "reference": "8ca2a82314e057cbfb15f52383c5c5a164b9673b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://bitbucket.org/owk/yii2-circular-navigation/get/8ca2a82314e057cbfb15f52383c5c5a164b9673b.zip",
+                "reference": "8ca2a82314e057cbfb15f52383c5c5a164b9673b",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/jquery": "3.4.*@stable | 3.3.*@stable | 3.2.*@stable | 3.1.*@stable | 2.2.*@stable | 2.1.*@stable | 1.11.*@stable | 1.12.*@stable",
+                "yiisoft/yii2": "^2.0"
+            },
+            "suggest": {
+                "yiisoft/yii2-bootstrap": "Used when ..???"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "owk\\circularnavigation\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Iván Naranjo",
+                    "email": "owk666@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Circular navigation widget for Yii 2 Framework.",
+            "homepage": "https://bitbucket.org/owk/yii2-circular-navigation",
+            "keywords": [
+                "circular nav",
+                "circular navigation",
+                "extension",
+                "menu",
+                "navigation",
+                "widget",
+                "yii2"
+            ],
+            "time": "2019-08-20T23:09:00+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
