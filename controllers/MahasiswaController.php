@@ -44,6 +44,10 @@ class MahasiswaController extends Controller
         ]);
     }
 
+    public function actionIndex2() {
+        return $this->render('index2');
+    }
+
     /**
      * Displays a single Mahasiswa model.
      * @param integer $id

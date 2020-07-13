@@ -125,4 +125,13 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
+    public function actionCreatewidget()
+    {
+        return $this->render('hellowidget');
+    }
+
+    public function actionDaftar_Kehadiran() {
+        return $this->render('/mahasiswa/index2');
+    }
 }
