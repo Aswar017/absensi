@@ -6,6 +6,7 @@ use kartik\select2\Select2;
 use yii\helpers\ArrayHelper;
 use app\models\Semester;
 use app\models\Golongan;
+use app\models\MataKuliah;
 
 
 /* @var $this yii\web\View */
@@ -22,6 +23,14 @@ use app\models\Golongan;
     <?= $form->field($model, 'nama')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'jurusan')->textInput(['maxlength' => true]) ?>
+
+
+    <?= $form->field($model, 'mata_kuliah')->widget(Select2::classname(), [
+        'data' => ArrayHelper::map(MataKuliah::find()->all(), 'kode_mk', 'nama'),
+        'pluginOptions' => [
+            'allowClear' => true
+        ]
+    ]) ?>
 
     <?= $form->field($model, 'semester')->widget(Select2::classname(), [
         'data' => ArrayHelper::map(semester::find()->all(), 'id', 'nama'),

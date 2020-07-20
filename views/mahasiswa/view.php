@@ -32,6 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'NIM',
             'nama',
             'jurusan',
+            'mata_kuliah',
             'semester',
             'golongan',
         ],

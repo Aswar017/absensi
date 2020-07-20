@@ -8,34 +8,30 @@ use yii\widgets\Pjax;
 /* @var $searchModel app\models\MahasiswaSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Mahasiswa';
+$this->title = 'Mahasiswas';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="mahasiswa-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>
-        <?= Html::a('Create Mahasiswa', ['create'], ['class' => 'btn btn-success']) ?>
-        <?= Html::a('Export Excel', ['export-excel'], ['class' => 'btn btn-sm btn-success']) ?>
+    <div class="row">
+        <div class="col-lg-3">
+            <p>
+                <?= Html::a('Create Mahasiswa', ['create'], ['class' => 'btn btn-sm btn-info']) ?>
+                <?= Html::a('Export Excel', ['export-excel'], ['class' => 'btn btn-sm btn-success']) ?>
             </p>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3">  
         </div>
         <div class="col-lg-3">
         </div>
-        <div class="col-lg-3">
-        </div>
-        <div class="col-lg-3" style="margin-top: 0.1em">
+        <div class="col-lg-3" style="margin-top: 0.5em">
             <?= $this->render('_search', ['model' => $searchModel]); ?>
         </div>
     </div>
 
     <?php Pjax::begin(); ?>
-    </p>
-
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
@@ -45,6 +41,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'NIM',
             'nama',
             'jurusan',
+            'mata_kuliah',
             'semester',
             'golongan',
 

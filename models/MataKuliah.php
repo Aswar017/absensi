@@ -80,6 +80,4 @@ class MataKuliah extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Dosen::className(), ['Nip_dosen' => 'dosen_id']);
     }
-
-    
 }
