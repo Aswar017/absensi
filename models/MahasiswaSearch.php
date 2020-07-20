@@ -18,7 +18,7 @@ class MahasiswaSearch extends Mahasiswa
     {
         return [
             [['NIM'], 'integer'],
-            [['nama', 'jurusan', 'semester'], 'safe'],
+            [['nama', 'jurusan', 'semester', 'golongan'], 'safe'],
         ];
     }
 
@@ -63,7 +63,8 @@ class MahasiswaSearch extends Mahasiswa
 
         $query->andFilterWhere(['like', 'nama', $this->nama])
             ->andFilterWhere(['like', 'jurusan', $this->jurusan])
-            ->andFilterWhere(['like', 'semester', $this->semester]);
+            ->andFilterWhere(['like', 'semester', $this->semester])
+            ->andFilterWhere(['like', 'golongan', $this->golongan]);
 
         return $dataProvider;
     }

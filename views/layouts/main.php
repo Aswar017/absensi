@@ -33,7 +33,7 @@ AppAsset::register($this);
         'brandLabel' => Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
+            'class' => 'navbar-inverse navbar',
         ],
     ]);
     echo Nav::widget([
@@ -44,7 +44,7 @@ AppAsset::register($this);
             ['label' => 'Contact', 'url' => ['/site/contact']],
             ['label' => 'Mahasiswa', 
                 'items' => [
-                    ['label' => 'Daftar_Kehadiran', 'url' => 'http://localhost/absensi/web/index.php?r=mahasiswa%2Findex'],
+                    ['label' => 'Daftar_Kehadiran', 'url' => 'http://localhost:8080/index.php?r=mahasiswa%2Findex'],
                 ]                    
             ],
             Yii::$app->user->isGuest ? (

@@ -11,6 +11,7 @@ use Yii;
  * @property string $nama
  * @property string $jurusan
  * @property string $semester
+ * @property string $golongan
  *
  * @property Kehadiran[] $kehadirans
  * @property MataKuliah[] $mataKuliahKodemks
@@ -31,9 +32,10 @@ class Mahasiswa extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['NIM', 'nama', 'jurusan', 'semester'], 'required'],
+            [['NIM', 'nama', 'jurusan', 'semester', 'golongan'], 'required'],
             [['NIM'], 'integer'],
             [['nama', 'jurusan', 'semester'], 'string', 'max' => 45],
+            [['golongan'], 'string', 'max' => 20],
             [['NIM'], 'unique'],
         ];
     }
@@ -48,6 +50,7 @@ class Mahasiswa extends \yii\db\ActiveRecord
             'nama' => 'Nama',
             'jurusan' => 'Jurusan',
             'semester' => 'Semester',
+            'golongan' => 'Golongan',
         ];
     }
 

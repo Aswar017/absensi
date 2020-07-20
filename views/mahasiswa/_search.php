@@ -1,7 +1,10 @@
 <?php
 
+use app\models\MahasiswaSearch;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use kartik\select2\Select2;
+use yii\helpers\ArrayHelper;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\MahasiswaSearch */
@@ -15,17 +18,25 @@ use yii\widgets\ActiveForm;
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'NIM') ?>
+     <?= $form->field($model, 'semester')->widget(Select2::classname(), [
+        'data' => ArrayHelper::map(MahasiswaSearch::find()->all(), 'semester', 'semester'),
+        'pluginOptions' => [
+            'allowClear' => true
+        ]
+    ]) ?>
+    <div class="form-group">
+        <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
+    </div>
 
-    <?= $form->field($model, 'nama') ?>
-
-    <?= $form->field($model, 'jurusan') ?>
-
-    <?= $form->field($model, 'semester') ?>
+    <?= $form->field($model, 'golongan')->widget(Select2::classname(), [
+        'data' => ArrayHelper::map(MahasiswaSearch::find()->all(), 'golongan', 'golongan'),
+        'pluginOptions' => [
+            'allowClear' => true
+        ]
+    ]) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
-        <?= Html::resetButton('Reset', ['class' => 'btn btn-outline-secondary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
